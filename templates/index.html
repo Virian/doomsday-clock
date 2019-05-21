@@ -1,0 +1,9 @@
+<!doctype html>
+<title>Doomsday Clock</title>
+<h1>Doomsday coming in {{ days }} days, {{ hours }} hours, {{ minutes }} minutes and {{ seconds }} seconds.</h1>
+
+{% if link_type == 'IMAGE' %}
+<img src="{{ link }}">
+{% elif link_type == 'VIDEO' %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ link }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% endif %}

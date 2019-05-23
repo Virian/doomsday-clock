@@ -14,7 +14,7 @@ doomsday = datetime.datetime(2022, 11, 27, 12)
 print("Doomsday set to", doomsday)
 
 @app.route("/")
-def hello():
+def index():
     now = datetime.datetime.now()
     date_diff = doomsday - now
     days, hours, minutes, seconds = date_diff.days, date_diff.seconds // 3600, date_diff.seconds // 60 % 60, date_diff.seconds % 60
